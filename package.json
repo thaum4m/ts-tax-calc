@@ -1,0 +1,52 @@
+{
+  "name": "@thaum4m/ts-tax-calc",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jasmine --config=./src/spec/support/jasmine.json",
+    "start:container": "docker-compose up -d",
+    "start:shell": "docker exec -it node-tax-calc /bin/bash",
+    "start": "node --import tsx ./src/index.ts",
+    "build": "esbuild src/index.ts --bundle --packages=external --platform=node --format=esm --outdir=dist --sourcemap",
+    "format": "prettier --write src",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix "
+  },
+  "engines": {
+    "node": ">=21.0.0"
+  },
+  "keywords": [
+    "typescript",
+    "cli",
+    "tax",
+    "calculator",
+    "australia"
+  ],
+  "author": "Peter Samaras",
+  "license": "ISC",
+  "description": "Command-line calculator for Australian resident income tax",
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "comma-number": "^2.1.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/comma-number": "^2.1.2",
+    "@types/jasmine": "^5.1.4",
+    "@types/node": "^22.5.4",
+    "@types/prompts": "^2.4.9",
+    "esbuild": "^0.23.1",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "jasmine": "^5.2.0",
+    "prettier": "3.3.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.4.0"
+  }
+}

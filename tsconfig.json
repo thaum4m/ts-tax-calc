@@ -1,0 +1,18 @@
+{
+    "extends": "@tsconfig/node22/tsconfig.json",
+    "compilerOptions": {
+      "outDir": "dist",
+      "baseUrl": ".",
+      "allowUnusedLabels": false,
+      "allowUnreachableCode": false,
+      "noFallthroughCasesInSwitch": true,
+      "noUncheckedIndexedAccess": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "declaration": true,
+      "sourceMap": true,
+      "resolveJsonModule": true
+    },
+    "include": ["src", "src/spec"],
+    "exclude": ["dist", "node_modules"]
+  }

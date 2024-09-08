@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  ts-tax-calc:
+    container_name: ts-tax-calc
+    build: .    
+    volumes:
+      - ./:/app
+    stdin_open: true 
+    tty: true
